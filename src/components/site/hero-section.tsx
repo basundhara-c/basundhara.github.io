@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { MapPin } from "lucide-react";
 
 import { ProfileLinkButtons } from "@/components/site/profile-link-buttons";
@@ -7,8 +6,8 @@ import { portfolio } from "@/lib/portfolio-data";
 
 export function HeroSection() {
   return (
-    <section className="grid gap-10 md:grid-cols-[minmax(0,1fr)_260px] md:items-start">
-      <div>
+    <section>
+      <div className="max-w-3xl">
         <p className="flex items-center gap-2 text-sm text-muted-foreground">
           <MapPin className="size-4 text-[#476a60]" />
           {portfolio.tagline}
@@ -39,20 +38,6 @@ export function HeroSection() {
           <ProfileLinkButtons links={portfolio.profileLinks} />
         </div>
       </div>
-
-      <aside className="md:pt-8">
-        <div className="overflow-hidden rounded-md border border-border bg-card shadow-sm">
-          <Image
-            src={portfolio.image.src}
-            alt={portfolio.image.alt}
-            width={520}
-            height={640}
-            priority
-            sizes="(min-width: 768px) 260px, 100vw"
-            className="aspect-[4/5] w-full object-cover"
-          />
-        </div>
-      </aside>
     </section>
   );
 }

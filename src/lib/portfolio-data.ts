@@ -9,10 +9,6 @@ export const portfolio = {
     "I am a software engineer focused on secure cloud-native networking infrastructure, open-source proxy systems, and distributed systems.",
   current:
     "I currently work at Databricks on datapath networking features for network proxies, after leading reverse tunnel and API gateway work at Nutanix and building a foundation in network security at Cisco.",
-  image: {
-    src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80",
-    alt: "Desk with notebook, laptop, and writing tools",
-  },
   navItems: [
     { label: "Work", href: "#work" },
     { label: "Writing", href: "#writing" },
