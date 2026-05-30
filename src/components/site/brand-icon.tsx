@@ -1,4 +1,5 @@
 import { GraduationCap, Mail } from "lucide-react";
+import Image from "next/image";
 import type { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa6";
 import {
@@ -13,6 +14,8 @@ import {
 
 import { cn } from "@/lib/utils";
 
+type BrandIconComponent = IconType | typeof Mail | "umass-logo";
+
 const brandIcons = {
   cisco: SiCisco,
   databricks: SiDatabricks,
@@ -24,7 +27,8 @@ const brandIcons = {
   linkedin: FaLinkedin,
   nutanix: SiNutanix,
   research: GraduationCap,
-} satisfies Record<string, IconType | typeof Mail>;
+  umass: "umass-logo",
+} satisfies Record<string, BrandIconComponent>;
 
 export type BrandIconName = keyof typeof brandIcons;
 
@@ -47,6 +51,21 @@ export function BrandIcon({
   className?: string;
 }) {
   const Icon = brandIcons[name];
+
+  if (Icon === "umass-logo") {
+    return (
+      // Official Collegiate M asset from the UMass Amherst brand portal.
+      // Source: https://www.umass.edu/brand/visual-identity/marks-and-seal
+      <Image
+        alt=""
+        aria-hidden="true"
+        src="/brand/umass-collegiate-m.png"
+        width={250}
+        height={211}
+        className={cn("size-3.5 shrink-0 object-contain", className)}
+      />
+    );
+  }
 
   return (
     <Icon

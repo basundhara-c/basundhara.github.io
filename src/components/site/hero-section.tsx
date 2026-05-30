@@ -52,19 +52,6 @@ export function HeroSection() {
             className="aspect-[4/5] w-full object-cover"
           />
         </div>
-        <div className="mt-4 grid grid-cols-3 gap-2">
-          {portfolio.stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-md border border-border bg-card px-3 py-2"
-            >
-              <p className="text-[0.7rem] uppercase tracking-[0.14em] text-muted-foreground">
-                {stat.label}
-              </p>
-              <p className="mt-1 text-sm font-medium">{stat.value}</p>
-            </div>
-          ))}
-        </div>
       </aside>
     </section>
   );

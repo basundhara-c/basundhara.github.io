@@ -6,10 +6,10 @@ import { portfolio } from "@/lib/portfolio-data";
 
 export function TimelineSection() {
   return (
-    <section id="timeline" className="scroll-mt-20">
+    <section id="work" className="scroll-mt-20">
       <SectionHeading
-        eyebrow="Timeline"
-        title="Work and writing as one public narrative."
+        eyebrow="Work"
+        title="Where I have worked and what I built."
         icon={Milestone}
       />
       <div className="mt-8 border-l border-border pl-6">

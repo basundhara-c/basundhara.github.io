@@ -1,22 +1,15 @@
-import { BookOpenText, BriefcaseBusiness } from "lucide-react";
+import { BookOpenText } from "lucide-react";
 
 import { ContactSection } from "@/components/site/contact-section";
 import { EntryListSection } from "@/components/site/entry-list-section";
-import { HighlightsSection } from "@/components/site/highlights-section";
 import { HeroSection } from "@/components/site/hero-section";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { TimelineSection } from "@/components/site/timeline-section";
 import { Separator } from "@/components/ui/separator";
 import { getWritingPosts } from "@/lib/content";
-import { portfolio } from "@/lib/portfolio-data";
 
 export default function Home() {
-  const workEntries = portfolio.work.map((item) => ({
-    ...item,
-    meta: [item.year, item.role],
-  }));
-
   const writingEntries = getWritingPosts().map((post) => ({
     title: post.title,
     description: post.summary,
@@ -34,20 +27,6 @@ export default function Home() {
 
         <Separator className="my-12" />
 
-        <HighlightsSection />
-
-        <Separator className="my-12" />
-
-        <EntryListSection
-          id="work"
-          eyebrow="Selected work"
-          title="Secure networking and distributed systems work."
-          icon={BriefcaseBusiness}
-          entries={workEntries}
-        />
-
-        <Separator className="my-12" />
-
         <TimelineSection />
 
         <Separator className="my-12" />
@@ -55,7 +34,7 @@ export default function Home() {
         <EntryListSection
           id="writing"
           eyebrow="Writing"
-          title="Technical notes rendered from Markdown."
+          title="Technical notes and public writing."
           icon={BookOpenText}
           entries={writingEntries}
           tagStyle="outline"

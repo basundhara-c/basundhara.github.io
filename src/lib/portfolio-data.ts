@@ -6,16 +6,15 @@ export const portfolio = {
   location: "Mountain View, CA",
   email: "basundhara17061996@gmail.com",
   intro:
-    "Basundhara is a software engineer focused on secure cloud-native networking infrastructure, open-source proxy systems, and distributed systems.",
+    "I am a software engineer focused on secure cloud-native networking infrastructure, open-source proxy systems, and distributed systems.",
   current:
-    "She currently works at Databricks on datapath networking features for network proxies, after leading reverse tunnel and API gateway work at Nutanix and building a foundation in network security at Cisco.",
+    "I currently work at Databricks on datapath networking features for network proxies, after leading reverse tunnel and API gateway work at Nutanix and building a foundation in network security at Cisco.",
   image: {
     src: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80",
     alt: "Desk with notebook, laptop, and writing tools",
   },
   navItems: [
     { label: "Work", href: "#work" },
-    { label: "Timeline", href: "#timeline" },
     { label: "Writing", href: "#writing" },
     { label: "Contact", href: "#contact" },
   ],
@@ -46,75 +45,6 @@ export const portfolio = {
     "Zero-trust networking",
     "C++ / Rust / Go",
     "Distributed systems",
-  ],
-  stats: [
-    { label: "Current", value: "Databricks" },
-    { label: "OSS", value: "Envoy" },
-    { label: "Research", value: "70 cites" },
-  ],
-  highlights: [
-    {
-      label: "Open-source impact",
-      value: "Envoy v1.36 reverse tunnels",
-      description:
-        "Led and upstreamed reverse tunnel support into Envoy Proxy for secure cross-boundary service communication.",
-    },
-    {
-      label: "Project leadership",
-      value: "Envoy code owner",
-      description:
-        "Reviews and approves work in a widely adopted open-source network proxy used in cloud-native infrastructure.",
-    },
-    {
-      label: "Research",
-      value: "CASPER at IGSC 2023",
-      description:
-        "Published carbon-aware distributed scheduling research from UMass Amherst's Lab for Advanced Software Systems.",
-    },
-    {
-      label: "Security foundation",
-      value: "Cisco CCNA / CCNP Security",
-      description:
-        "Built early expertise across firewalls, IPS, VPNs, malware analysis, and access-control systems.",
-    },
-  ],
-  work: [
-    {
-      title: "Databricks Network Proxy Infrastructure",
-      role: "Software Engineer",
-      year: "2026 - Present",
-      description:
-        "Developing datapath networking features for network proxies using C++, Rust, and Scala, with a focus on low-latency components that support high-throughput distributed systems.",
-      logo: "databricks",
-      tags: ["Databricks", "Network proxies", "C++", "Rust", "Scala"],
-    },
-    {
-      title: "Envoy Reverse Tunneling",
-      role: "Open-source networking infrastructure",
-      year: "2024 - 2025",
-      description:
-        "Led the design and implementation of reverse tunnel support in Envoy Proxy, enabling protected services behind firewalls or NAT to initiate secure outbound tunnels instead of exposing inbound ports.",
-      logo: "envoy",
-      tags: ["Envoy v1.36", "Code owner", "Zero trust", "Nutanix"],
-    },
-    {
-      title: "Nutanix Hybrid-Cloud Traffic Management",
-      role: "Member of Technical Staff 4",
-      year: "2023 - 2026",
-      description:
-        "Built critical datapath and control-plane components for Nutanix's high-performance API Gateway and distributed traffic management across hybrid-cloud environments.",
-      logo: "nutanix",
-      tags: ["API Gateway", "C++", "Go", "Hybrid cloud"],
-    },
-    {
-      title: "CASPER Carbon-Aware Distributed Scheduling",
-      role: "Graduate research, UMass Amherst",
-      year: "2022 - 2023",
-      description:
-        "Co-developed carbon-aware scheduling research for distributed web applications at the Lab for Advanced Software Systems; the work was presented at IGSC 2023.",
-      logo: "research",
-      tags: ["UMass Amherst", "Distributed systems", "IGSC 2023", "Research"],
-    },
   ],
   timeline: [
     {
@@ -150,7 +80,7 @@ export const portfolio = {
       title: "UMass Amherst MS in Computer Science",
       description:
         "Studied distributed systems, operating systems, reverse engineering, and network security; completed research on carbon-aware distributed scheduling.",
-      logo: "research",
+      logo: "umass",
     },
     {
       period: "Jul 2018 - Aug 2021",
@@ -177,5 +107,4 @@ export const portfolio = {
 } as const;
 
 export type PortfolioLink = (typeof portfolio.profileLinks)[number];
-export type WorkEntry = (typeof portfolio.work)[number];
 export type TimelineEntry = (typeof portfolio.timeline)[number];
