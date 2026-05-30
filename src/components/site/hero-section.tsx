@@ -1,5 +1,3 @@
-import { MapPin } from "lucide-react";
-
 import { ProfileLinkButtons } from "@/components/site/profile-link-buttons";
 import { Badge } from "@/components/ui/badge";
 import { portfolio } from "@/lib/portfolio-data";
@@ -8,16 +6,9 @@ export function HeroSection() {
   return (
     <section>
       <div className="max-w-3xl">
-        <p className="flex items-center gap-2 text-sm text-muted-foreground">
-          <MapPin className="size-4 text-[#476a60]" />
-          {portfolio.tagline}
-        </p>
-        <h1 className="mt-5 max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-balance text-foreground sm:text-4xl">
+        <h1 className="max-w-4xl text-3xl font-semibold leading-tight tracking-normal text-balance text-foreground">
           {portfolio.intro}
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-          {portfolio.current}
-        </p>
 
         <div className="mt-7 flex flex-wrap gap-2">
           {portfolio.focusAreas.map((area) => (
