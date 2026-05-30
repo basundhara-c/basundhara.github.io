@@ -1,6 +1,7 @@
 ---
 title: "CASPER and Carbon-Aware Distributed Scheduling"
-date: "April 2026"
+date: "October 28, 2023"
+publishedAt: "2023-10-28"
 readTime: "5 mins"
 summary: "Research from UMass Amherst on scheduling distributed web application workloads while accounting for carbon cost and performance constraints."
 tags: ["Distributed Systems", "Research", "Scheduling", "Sustainability"]
@@ -26,7 +27,7 @@ The project connected several systems concerns:
 
 ## Publication
 
-The work was presented at IGSC 2023 and published as part of Basundhara's graduate research at UMass Amherst.
+The work was published on October 28, 2023 in the Proceedings of the 14th International Green and Sustainable Computing Conference, as listed on Google Scholar and Crossref for DOI [10.1145/3634769.3634812](https://doi.org/10.1145/3634769.3634812).
 
 Public paper: [lass.cs.umass.edu/papers/pdf/igsc2023-casper.pdf](https://lass.cs.umass.edu/papers/pdf/igsc2023-casper.pdf)
 

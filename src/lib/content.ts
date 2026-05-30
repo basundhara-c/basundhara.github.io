@@ -7,6 +7,7 @@ export type WritingPost = {
   slug: string;
   title: string;
   date: string;
+  publishedAt: string;
   readTime: string;
   summary: string;
   tags: string[];
@@ -39,6 +40,7 @@ function parseFrontMatter(markdown: string): {
     frontMatter: {
       title: data.title,
       date: data.date,
+      publishedAt: data.publishedAt ?? data.date,
       readTime: data.readTime,
       summary: data.summary,
       tags: data.tags
@@ -65,7 +67,16 @@ export function getWritingPosts(): WritingPost[] {
         body,
       };
     })
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .sort((a, b) => {
+      const aTime = Date.parse(a.publishedAt);
+      const bTime = Date.parse(b.publishedAt);
+
+      if (Number.isNaN(aTime) || Number.isNaN(bTime)) {
+        return b.date.localeCompare(a.date);
+      }
+
+      return bTime - aTime;
+    });
 }
 
 export function getWritingPost(slug: string): WritingPost | undefined {

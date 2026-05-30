@@ -1,6 +1,7 @@
 ---
 title: "Reverse Tunneling in Envoy Proxy"
-date: "May 2026"
+date: "February 3-5, 2026"
+publishedAt: "2026-02-05"
 readTime: "7 mins"
 summary: "How reverse tunnels in Envoy reduce exposed network attack surfaces for secure cross-cluster and hybrid-cloud communication."
 tags: ["Envoy", "Network Security", "Zero Trust", "Open Source"]
@@ -23,6 +24,14 @@ The work combined datapath engineering, security architecture, and production co
 - integration with Envoy's proxy architecture
 - production use in enterprise hybrid-cloud environments
 - upstream contribution to a widely adopted open-source networking proxy
+
+## Date Trail
+
+The public timeline for this work is source-backed:
+
+- April 4, 2024: Basundhara opened Envoy issue [#33320](https://github.com/envoyproxy/envoy/issues/33320), the design proposal for reverse connections in Envoy.
+- October 14, 2025: Envoy [v1.36.0](https://www.envoyproxy.io/docs/envoy/v1.36.0/version_history/v1.36/v1.36.0) shipped with experimental reverse tunnel support.
+- February 3-5, 2026: Nutanix published the reverse tunnel technical series credited to Basundhara across [Part 2](https://www.nutanix.com/tech-center/blog/designing-secure-cross-cluster-communications-for-nutanix-part2-reverse-tunnel-initiation), [Part 3](https://www.nutanix.com/tech-center/blog/designing-secure-cross-cluster-communications-for-nutanix-part3-reverse-tunnel-acceptance), and [Part 4](https://www.nutanix.com/tech-center/blog/designing-secure-cross-cluster-communications-for-nutanix-part4-life-of-a-data-request).
 
 ## Why It Matters
 
