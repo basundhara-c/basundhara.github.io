@@ -5,7 +5,9 @@ import { EntryListSection } from "@/components/site/entry-list-section";
 import { HeroSection } from "@/components/site/hero-section";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
+import { TimelineSection } from "@/components/site/timeline-section";
 import { Separator } from "@/components/ui/separator";
+import { getWritingPosts } from "@/lib/content";
 import { portfolio } from "@/lib/portfolio-data";
 
 export default function Home() {
@@ -14,9 +16,12 @@ export default function Home() {
     meta: [item.year, item.role],
   }));
 
-  const writingEntries = portfolio.writing.map((item) => ({
-    ...item,
-    meta: [item.date, item.readTime],
+  const writingEntries = getWritingPosts().map((post) => ({
+    title: post.title,
+    description: post.summary,
+    tags: post.tags,
+    meta: [post.date, post.readTime],
+    href: `/writing/${post.slug}/`,
   }));
 
   return (
@@ -31,17 +36,21 @@ export default function Home() {
         <EntryListSection
           id="work"
           eyebrow="Selected work"
-          title="Projects with a clear point of view."
+          title="Operational product work with a clear point of view."
           icon={BriefcaseBusiness}
           entries={workEntries}
         />
 
         <Separator className="my-12" />
 
+        <TimelineSection />
+
+        <Separator className="my-12" />
+
         <EntryListSection
           id="writing"
           eyebrow="Writing"
-          title="Notes on product, trust, and practical execution."
+          title="Rendered from Markdown notes and writing briefs."
           icon={BookOpenText}
           entries={writingEntries}
           tagStyle="outline"

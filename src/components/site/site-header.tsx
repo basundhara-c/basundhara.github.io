@@ -10,7 +10,7 @@ export function SiteHeader() {
         <a href="#top" className="text-sm font-semibold tracking-normal">
           {portfolio.name}
         </a>
-        <div className="flex items-center gap-5 text-sm text-muted-foreground">
+        <div className="flex items-center gap-3 text-sm text-muted-foreground sm:gap-5">
           {portfolio.navItems.map((item) => (
             <a
               key={item.href}

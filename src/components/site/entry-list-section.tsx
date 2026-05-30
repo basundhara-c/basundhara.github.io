@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { SectionHeading } from "@/components/site/section-heading";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +9,7 @@ type Entry = {
   description: string;
   tags: readonly string[];
   meta: readonly string[];
+  href?: string;
 };
 
 export function EntryListSection({
@@ -40,9 +42,19 @@ export function EntryListSection({
               ))}
             </div>
             <div>
-              <h3 className="text-xl font-semibold tracking-normal">
-                {entry.title}
-              </h3>
+              {entry.href ? (
+                <a
+                  href={entry.href}
+                  className="group inline-flex items-center gap-2 text-xl font-semibold tracking-normal underline-offset-4 hover:text-[#476a60] hover:underline"
+                >
+                  {entry.title}
+                  <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+              ) : (
+                <h3 className="text-xl font-semibold tracking-normal">
+                  {entry.title}
+                </h3>
+              )}
               <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
                 {entry.description}
               </p>

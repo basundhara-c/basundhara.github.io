@@ -3,6 +3,9 @@
 A compact portfolio for `basundara.dev`, built with Next.js App Router,
 Tailwind CSS, and shadcn/ui.
 
+Writing posts live in `src/content/writing/*.md` and are rendered at
+`/writing/[slug]/`.
+
 ## Development
 
 ```bash
