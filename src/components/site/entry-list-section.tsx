@@ -1,0 +1,70 @@
+import type { LucideIcon } from "lucide-react";
+
+import { SectionHeading } from "@/components/site/section-heading";
+import { Badge } from "@/components/ui/badge";
+
+type Entry = {
+  title: string;
+  description: string;
+  tags: readonly string[];
+  meta: readonly string[];
+};
+
+export function EntryListSection({
+  id,
+  eyebrow,
+  title,
+  icon,
+  entries,
+  tagStyle = "secondary",
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  icon: LucideIcon;
+  entries: readonly Entry[];
+  tagStyle?: "secondary" | "outline";
+}) {
+  return (
+    <section id={id} className="scroll-mt-20">
+      <SectionHeading eyebrow={eyebrow} title={title} icon={icon} />
+      <div className="mt-8 divide-y divide-border">
+        {entries.map((entry) => (
+          <article
+            key={entry.title}
+            className="grid gap-4 py-6 md:grid-cols-[160px_minmax(0,1fr)]"
+          >
+            <div className="text-sm text-muted-foreground">
+              {entry.meta.map((item) => (
+                <p key={item}>{item}</p>
+              ))}
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold tracking-normal">
+                {entry.title}
+              </h3>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">
+                {entry.description}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {entry.tags.map((tag) => (
+                  <Badge
+                    key={tag}
+                    variant={tagStyle}
+                    className={
+                      tagStyle === "outline"
+                        ? "rounded-md border-[#d7dedb]"
+                        : "rounded-md bg-secondary/80"
+                    }
+                  >
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
