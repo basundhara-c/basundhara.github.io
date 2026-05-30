@@ -3,8 +3,6 @@ export const portfolio = {
   siteUrl: "https://basundara.dev",
   location: "Mountain View, CA",
   email: "basundhara17061996@gmail.com",
-  intro:
-    "I am a software engineer focused on secure cloud-native networking infrastructure, open-source proxy systems, and distributed systems, currently working at Databricks on datapath networking features for network proxies while remaining an active Envoy contributor and code owner after leading reverse tunnel and API gateway work at Nutanix and building a foundation in network security at Cisco.",
   navItems: [
     { label: "Work", href: "#work" },
     { label: "Writing", href: "#writing" },
