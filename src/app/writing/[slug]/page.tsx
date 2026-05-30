@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { Separator } from "@/components/ui/separator";
 import { getWritingPost, getWritingPosts } from "@/lib/content";
+import { portfolio } from "@/lib/portfolio-data";
 
 export function generateStaticParams() {
   return getWritingPosts().map((post) => ({
@@ -26,7 +27,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Basundara`,
+    title: `${post.title} | ${portfolio.name}`,
     description: post.summary,
   };
 }
