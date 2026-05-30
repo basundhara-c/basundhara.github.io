@@ -8,7 +8,7 @@ export const portfolio = {
   intro:
     "I am a software engineer focused on secure cloud-native networking infrastructure, open-source proxy systems, and distributed systems.",
   current:
-    "I currently work at Databricks on datapath networking features for network proxies, after leading reverse tunnel and API gateway work at Nutanix and building a foundation in network security at Cisco.",
+    "I currently work at Databricks on datapath networking features for network proxies and remain an active Envoy contributor and code owner, after leading reverse tunnel and API gateway work at Nutanix and building a foundation in network security at Cisco.",
   navItems: [
     { label: "Work", href: "#work" },
     { label: "Writing", href: "#writing" },
@@ -51,10 +51,10 @@ export const portfolio = {
       logo: "databricks",
     },
     {
-      period: "Oct 2024 - Sep 2025",
-      title: "Envoy reverse tunnels",
+      period: "Oct 2024 - Present",
+      title: "Envoy open-source networking",
       description:
-        "Designed and upstreamed reverse tunnel support for Envoy Proxy, reducing exposed inbound attack surfaces for cross-cluster communication.",
+        "Active Envoy contributor and code owner. Designed and upstreamed reverse tunnel support for Envoy Proxy, and continue work around proxy extensibility and secure service communication.",
       logo: "envoy",
     },
     {

@@ -28,7 +28,7 @@ The Envoy reverse tunnel contribution is the clearest public example of this arc
 - open-source contribution
 - proxy datapath engineering
 
-Now at Databricks, Basundhara works on datapath networking features for network proxies using C++, Rust, and Scala, including low-latency components for high-throughput distributed systems.
+Now at Databricks, Basundhara works on datapath networking features for network proxies using C++, Rust, and Scala, including low-latency components for high-throughput distributed systems. She also remains active in Envoy as a contributor and code owner.
 
 ## Public Portfolio Framing
 

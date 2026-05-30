@@ -14,7 +14,7 @@ The reverse tunnel design inverts the traditional client-server socket model. A 
 
 ## Contribution
 
-Basundhara led the design and implementation of reverse tunnel support while at Nutanix and contributed the feature upstream to Envoy Proxy. The feature was introduced in Envoy 1.36 and is now part of the open-source Envoy project.
+Basundhara led the design and implementation of reverse tunnel support while at Nutanix and contributed the feature upstream to Envoy Proxy. The feature was introduced in Envoy 1.36 and is now part of the open-source Envoy project. She remains active in Envoy as a contributor and code owner.
 
 The work combined datapath engineering, security architecture, and production constraints:
 
