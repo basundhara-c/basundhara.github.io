@@ -90,12 +90,12 @@ export const portfolio = {
   ],
   contact: {
     eyebrow: "Contact",
-    title: "Secure networking, Envoy, and distributed systems.",
+    title: "Envoy, proxy systems, and infrastructure engineering.",
     description:
       "Reach out about cloud networking infrastructure, proxy systems, distributed systems research, or open-source Envoy work.",
     cta: "Email Basundhara",
   },
-  footerNote: "Secure cloud networking, distributed systems, and open-source infrastructure.",
+  footerNote: "Open-source proxies and infrastructure engineering.",
 } as const;
 
 export type PortfolioLink = (typeof portfolio.profileLinks)[number];
