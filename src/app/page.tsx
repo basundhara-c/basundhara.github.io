@@ -2,6 +2,7 @@ import { BookOpenText, BriefcaseBusiness } from "lucide-react";
 
 import { ContactSection } from "@/components/site/contact-section";
 import { EntryListSection } from "@/components/site/entry-list-section";
+import { HighlightsSection } from "@/components/site/highlights-section";
 import { HeroSection } from "@/components/site/hero-section";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
@@ -33,10 +34,14 @@ export default function Home() {
 
         <Separator className="my-12" />
 
+        <HighlightsSection />
+
+        <Separator className="my-12" />
+
         <EntryListSection
           id="work"
           eyebrow="Selected work"
-          title="Operational product work with a clear point of view."
+          title="Secure networking and distributed systems work."
           icon={BriefcaseBusiness}
           entries={workEntries}
         />
@@ -50,7 +55,7 @@ export default function Home() {
         <EntryListSection
           id="writing"
           eyebrow="Writing"
-          title="Rendered from Markdown notes and writing briefs."
+          title="Technical notes rendered from Markdown."
           icon={BookOpenText}
           entries={writingEntries}
           tagStyle="outline"

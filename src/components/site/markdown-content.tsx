@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Badge } from "@/components/ui/badge";
 
 function inlineMarkdown(text: string) {
-  const parts = text.split(/(`[^`]+`)/g);
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|`[^`]+`)/g);
 
   return parts.map((part, index) => {
     if (part.startsWith("`") && part.endsWith("`")) {
@@ -14,6 +14,22 @@ function inlineMarkdown(text: string) {
         >
           {part.slice(1, -1)}
         </code>
+      );
+    }
+
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+
+    if (linkMatch) {
+      return (
+        <a
+          key={`${part}-${index}`}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noreferrer"
+          className="break-words font-medium text-foreground underline underline-offset-4 hover:text-[#476a60] [overflow-wrap:anywhere]"
+        >
+          {linkMatch[1]}
+        </a>
       );
     }
 
@@ -98,7 +114,7 @@ export function MarkdownContent({ body }: { body: string }) {
 
   flushList();
 
-  return <div className="text-base">{nodes}</div>;
+  return <div className="text-base break-words">{nodes}</div>;
 }
 
 export function TagList({ tags }: { tags: readonly string[] }) {

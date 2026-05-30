@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(portfolio.siteUrl),
   title: `${portfolio.name} | Portfolio`,
   description:
-    "A compact portfolio for Basundara's product, design, writing, and launch work.",
+    "Basundhara Chakrabarty's portfolio for secure cloud networking, Envoy Proxy, distributed systems, and network security work.",
   alternates: {
     canonical: "/",
   },
