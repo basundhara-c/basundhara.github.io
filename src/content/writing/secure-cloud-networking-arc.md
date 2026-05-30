@@ -1,7 +1,7 @@
 ---
 title: "From Network Security to Cloud-Native Proxies"
-date: "July 2018 - Present"
-publishedAt: "2026-03-01"
+date: "May 30, 2026"
+publishedAt: "2026-05-30"
 readTime: "6 mins"
 summary: "A career arc through Cisco network security, Google infrastructure, Nutanix hybrid-cloud networking, and Databricks proxy systems."
 tags: ["Career", "Cloud Networking", "Security", "Distributed Systems"]
@@ -30,16 +30,6 @@ The Envoy reverse tunnel contribution is the clearest public example of this arc
 - proxy datapath engineering
 
 Now at Databricks, Basundhara works on datapath networking features for network proxies using C++, Rust, and Scala, including low-latency components for high-throughput distributed systems. She also remains active in Envoy as a contributor and code owner.
-
-## Date Basis
-
-This note is a career timeline rather than a standalone publication, so the date label follows the resume-backed work span:
-
-- Cisco network security: July 2018 - August 2021
-- UMass Amherst MS research: September 2021 - May 2023
-- Google Shopping Ads Infrastructure internship: June 2022 - August 2022
-- Nutanix API gateway and hybrid-cloud networking: June 2023 - February 2026
-- Databricks network proxy datapath: March 2026 - Present
 
 ## Public Portfolio Framing
 
