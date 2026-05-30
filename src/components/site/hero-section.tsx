@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section>
       <div className="max-w-3xl">
-        <h1 className="max-w-4xl text-xl font-semibold leading-snug tracking-normal text-balance text-foreground sm:text-2xl">
+        <h1 className="max-w-4xl text-xl font-normal leading-snug tracking-normal text-balance text-foreground sm:text-2xl">
           {portfolio.intro}
         </h1>
 
