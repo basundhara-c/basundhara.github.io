@@ -1,6 +1,5 @@
 export const portfolio = {
   name: "Basundhara Chakrabarty",
-  shortName: "Basundhara",
   siteUrl: "https://basundara.dev",
   tagline: "Secure cloud networking and distributed systems",
   location: "Mountain View, CA",

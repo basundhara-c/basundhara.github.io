@@ -8,7 +8,7 @@ export function SiteHeader() {
         className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between px-5 md:px-8"
       >
         <a href="#top" className="text-sm font-semibold tracking-normal">
-          {portfolio.shortName}
+          {portfolio.name}
         </a>
         <div className="flex items-center gap-3 text-sm text-muted-foreground sm:gap-5">
           {portfolio.navItems.map((item) => (

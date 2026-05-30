@@ -12,13 +12,10 @@ export function HeroSection() {
           <MapPin className="size-4 text-[#476a60]" />
           {portfolio.tagline}
         </p>
-        <h1 className="mt-5 text-5xl font-semibold tracking-normal text-balance text-foreground sm:text-6xl">
-          {portfolio.name}
-        </h1>
-        <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
+        <h1 className="mt-5 max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-balance text-foreground sm:text-4xl">
           {portfolio.intro}
-        </p>
-        <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
+        </h1>
+        <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
           {portfolio.current}
         </p>
 
