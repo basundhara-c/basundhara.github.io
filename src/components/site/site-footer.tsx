@@ -1,3 +1,4 @@
+import { BrandIcon } from "@/components/site/brand-icon";
 import { ExternalLink } from "@/components/site/external-link";
 import { portfolio } from "@/lib/portfolio-data";
 
@@ -10,6 +11,7 @@ export function SiteFooter() {
         <div className="flex gap-4">
           {portfolio.profileLinks.map((link) => (
             <ExternalLink key={link.label} href={link.href}>
+              <BrandIcon name={link.kind} />
               {link.label}
             </ExternalLink>
           ))}

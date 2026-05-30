@@ -1,6 +1,7 @@
 import type { LucideIcon } from "lucide-react";
 import { ArrowUpRight } from "lucide-react";
 
+import { BrandIcon, type BrandIconName } from "@/components/site/brand-icon";
 import { SectionHeading } from "@/components/site/section-heading";
 import { Badge } from "@/components/ui/badge";
 
@@ -10,6 +11,7 @@ type Entry = {
   tags: readonly string[];
   meta: readonly string[];
   href?: string;
+  logo?: BrandIconName;
 };
 
 export function EntryListSection({
@@ -47,11 +49,17 @@ export function EntryListSection({
                   href={entry.href}
                   className="group inline-flex items-center gap-2 text-xl font-semibold tracking-normal underline-offset-4 hover:text-[#476a60] hover:underline"
                 >
+                  {entry.logo ? (
+                    <BrandIcon name={entry.logo} className="size-5" />
+                  ) : null}
                   {entry.title}
                   <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </a>
               ) : (
-                <h3 className="text-xl font-semibold tracking-normal">
+                <h3 className="flex items-center gap-2 text-xl font-semibold tracking-normal">
+                  {entry.logo ? (
+                    <BrandIcon name={entry.logo} className="size-5" />
+                  ) : null}
                   {entry.title}
                 </h3>
               )}

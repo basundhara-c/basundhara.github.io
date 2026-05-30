@@ -1,14 +1,7 @@
-import { Code2, IdCard, Mail } from "lucide-react";
-
+import { BrandIcon } from "@/components/site/brand-icon";
 import { buttonVariants } from "@/components/ui/button";
 import type { PortfolioLink } from "@/lib/portfolio-data";
 import { cn } from "@/lib/utils";
-
-const linkIcons = {
-  email: Mail,
-  github: Code2,
-  linkedin: IdCard,
-} as const;
 
 export function ProfileLinkButtons({
   links,
@@ -18,8 +11,6 @@ export function ProfileLinkButtons({
   return (
     <div className="flex flex-wrap gap-2">
       {links.map((link) => {
-        const Icon = linkIcons[link.kind];
-
         return (
           <a
             key={link.label}
@@ -31,7 +22,7 @@ export function ProfileLinkButtons({
               "rounded-md border-[#d7dedb] bg-background text-foreground hover:bg-[#f5faf7]",
             )}
           >
-            <Icon className="size-3.5" />
+            <BrandIcon name={link.kind} />
             {link.label}
           </a>
         );

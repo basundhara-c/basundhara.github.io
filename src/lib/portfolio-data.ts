@@ -35,6 +35,11 @@ export const portfolio = {
       href: "https://www.linkedin.com/in/basundhara1706/",
       kind: "linkedin",
     },
+    {
+      label: "Google Scholar",
+      href: "https://scholar.google.com/citations?user=vAD0UqwAAAAJ&hl=en",
+      kind: "googleScholar",
+    },
   ],
   focusAreas: [
     "Envoy Proxy",
@@ -80,6 +85,7 @@ export const portfolio = {
       year: "2026 - Present",
       description:
         "Developing datapath networking features for network proxies using C++, Rust, and Scala, with a focus on low-latency components that support high-throughput distributed systems.",
+      logo: "databricks",
       tags: ["Databricks", "Network proxies", "C++", "Rust", "Scala"],
     },
     {
@@ -88,6 +94,7 @@ export const portfolio = {
       year: "2024 - 2025",
       description:
         "Led the design and implementation of reverse tunnel support in Envoy Proxy, enabling protected services behind firewalls or NAT to initiate secure outbound tunnels instead of exposing inbound ports.",
+      logo: "envoy",
       tags: ["Envoy v1.36", "Code owner", "Zero trust", "Nutanix"],
     },
     {
@@ -96,6 +103,7 @@ export const portfolio = {
       year: "2023 - 2026",
       description:
         "Built critical datapath and control-plane components for Nutanix's high-performance API Gateway and distributed traffic management across hybrid-cloud environments.",
+      logo: "nutanix",
       tags: ["API Gateway", "C++", "Go", "Hybrid cloud"],
     },
     {
@@ -104,6 +112,7 @@ export const portfolio = {
       year: "2022 - 2023",
       description:
         "Co-developed carbon-aware scheduling research for distributed web applications at the Lab for Advanced Software Systems; the work was presented at IGSC 2023.",
+      logo: "research",
       tags: ["UMass Amherst", "Distributed systems", "IGSC 2023", "Research"],
     },
   ],
@@ -113,36 +122,42 @@ export const portfolio = {
       title: "Databricks: network proxy datapath",
       description:
         "Software Engineer working on datapath networking features, low-latency proxy components, and Envoy dynamic modules.",
+      logo: "databricks",
     },
     {
       period: "Oct 2024 - Sep 2025",
       title: "Envoy reverse tunnels",
       description:
         "Designed and upstreamed reverse tunnel support for Envoy Proxy, reducing exposed inbound attack surfaces for cross-cluster communication.",
+      logo: "envoy",
     },
     {
       period: "Jun 2023 - Feb 2026",
       title: "Nutanix: API gateway and hybrid cloud",
       description:
         "Member of Technical Staff 4 building datapath and control-plane features for a high-performance API Gateway and secure hybrid-cloud communication.",
+      logo: "nutanix",
     },
     {
       period: "Jun 2022 - Aug 2022",
       title: "Google Shopping Ads infrastructure",
       description:
         "Built C++, ProtoBuf, and gRPC tooling that used historical pipeline data and AutoTFX models to estimate Borg compute impact for indexing changes.",
+      logo: "google",
     },
     {
       period: "Sep 2021 - May 2023",
       title: "UMass Amherst MS in Computer Science",
       description:
         "Studied distributed systems, operating systems, reverse engineering, and network security; completed research on carbon-aware distributed scheduling.",
+      logo: "research",
     },
     {
       period: "Jul 2018 - Aug 2021",
       title: "Cisco network security",
       description:
         "Handled escalations and automation for firewalls, IPS, VPN, malware analysis, and access-control systems while leading Cisco Security Innovation Framework automation projects.",
+      logo: "cisco",
     },
   ],
   credentials: [
